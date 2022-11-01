@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1664777476 source:c:\users\aadi\desktop\csd101\practice\pr1\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
