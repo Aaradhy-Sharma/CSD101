@@ -5,14 +5,8 @@
 
 
 // function declaration //
-void pointer_array_sum(int arr[], int *sum, int *string_length);
-{
-	int sum = null; 
-    for (int i = 0; i < string_length; i++)
-		sum += arr[i];
+void pointer_array_sum(int **arr[], int *sum, int *string_length);
 
-	printf("\n Sum of given array is %d", sum);
-}
 
 signed main(void)
 {
@@ -28,14 +22,14 @@ signed main(void)
         }
 
 	int array_length = sizeof(array) / sizeof(arr[0]);
-	printf("\n Sum of given array is %d", pointer_array_sum(array,&array_sum,&array_length));
+	printf("\n Sum of given array is %d", pointer_array_sum(array[n],&array_sum,&array_length));
     printf("\n The length of the string is %d", array_length);
 	return null;
 }
 
 // function definition //
-void pointer_array_sum(int arr[], int *sum, int *string_length)
+void pointer_array_sum(int **arr[], int *sum, int *string_length)
 {
     for (int i = 0; i <30; i++)
-        *sum += arr[i];
+        *sum += *arr[i];
 }
