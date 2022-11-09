@@ -9,6 +9,10 @@ void pointer_factorial_finder(signed *number, signed *factorial);
 // driver code //
 signed main(void)
 {
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t Pointer factorial finder by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+
     signed number_input;
     printf("\n Please enter the number : ");
     scanf("%d", &number_input);
