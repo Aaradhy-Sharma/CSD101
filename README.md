@@ -1,8 +1,15 @@
-# CSD101
-This repository contains the course material for the course CSD101.
+## Description 
 
-Feel free to use these codes for your reference/practice.
-Make sure to use your own variables and terminologies to avoid plagarism.
+This folder contains all the graded assignments for the course CSD101.
+The folder will be updated twice per week to keep upto date with the latest assignments. Feel free to use this as a reference/source material
 
-This repository will be updated twice per week or when new assignments arrive.
-- Aaradhy Sharma
+
+
+## Feedback
+If you have any feedback, feel free to reach out to me on my [mail](mailto:as783@snu.edu.in)
+
+## Author
+- [@Aaradhy-Sharma](https://github.com/Aaradhy-Sharma)
+
+## License
+[MIT License](LICENSE)
