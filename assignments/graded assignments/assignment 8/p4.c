@@ -9,6 +9,10 @@ void pointer_string_reverser(char *string);
 // driver code //
 signed main(void)
 {
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t Pointer String Reverser by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+
     char string[100];
     printf("\n Please enter the string : ");
     scanf("%s", string);
