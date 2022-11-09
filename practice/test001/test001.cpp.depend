@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1664773905 source:c:\users\aadi\desktop\csd101\practice\test001\c1.cpp
-	<stdio.h>
-	<stdlib.h>
-
-1664773929 source:c:\users\aadi\desktop\csd101\practice\test001\main.c
-	<stdio.h>
-	<stdlib.h>
-

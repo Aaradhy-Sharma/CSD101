@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1664819998 source:c:\users\aadi\desktop\csd101\practice\practice2\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<ctype.h>
-
