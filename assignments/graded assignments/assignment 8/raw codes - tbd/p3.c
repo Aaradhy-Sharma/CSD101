@@ -37,7 +37,7 @@ void populator_pointer(signed array[], signed *first_number , signed *second_num
 
     loc1:
         {
-        while(array[*reader]<array_length)
+        while(array[*reader]<30)
             {
                  array[*reader] = *first_number + *third_number;
                 *first_number = *second_number;
@@ -53,7 +53,7 @@ void populator_pointer(signed array[], signed *first_number , signed *second_num
 signed main(void)
 {
 
-signed array[array_length];
+signed array[30];
 signed first_number = null;
 signed second_number = 1;
 signed third_number = 1;
@@ -61,7 +61,7 @@ signed reader = null;
 signed i;
 
 populator_pointer(array,&first_number,&second_number,&third_number,&reader);
-for(i=null;i<array_length;i++)
+for(i=null;i<30;i++)
     {
           printf("\n The %dth element of the array is %d",i,array[i]);
     }
