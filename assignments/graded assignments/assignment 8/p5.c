@@ -3,6 +3,8 @@
 #include <string.h>
 #define null 0 
 #define max_array_length 100
+#define unity 1
+
 
 // function declaration //
 void pointer_array_sum(signed *array_pointer, signed len);
