@@ -10,6 +10,10 @@ void pointer_array_sum(signed *array_pointer, signed len);
 //driver code//
 signed main(void)
 {
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t Pointer Array Sum finder by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+
     signed n,sum=null;
     printf("\n Please enter the number of elements in the array(max 100):");
     scanf("%d", &n);
