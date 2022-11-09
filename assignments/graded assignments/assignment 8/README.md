@@ -25,7 +25,7 @@
 
 ## Contents
 
-- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%208/Assignment 8.pdf) - You can find a copy of the original question paper here.
+- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%208/Assignment%208.pdf) - You can find a copy of the original question paper here.
 
 - [Problem 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%208/p1.c) - Write a simple function to cycle(‘int’) values stored in three variables. If a =1, b =2, c=3then after cycle you get a=3, b=1, c=2.
 
