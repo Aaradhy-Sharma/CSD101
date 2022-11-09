@@ -10,7 +10,11 @@ void populator(signed array[], signed *first_number, signed *second_number, sign
 // driver code //
 signed main()
 {
-    
+
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t pointer populator by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+
     signed array[array_length],first_number = null, second_number = 1, third_number = 1, reader_vector = null;
     populator(array, &first_number, &second_number, &third_number, &reader_vector);
     for(signed i=0;i<array_length;i++)
