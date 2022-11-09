@@ -9,7 +9,7 @@ signed array_sum_using_pointer(int arr[], int *sum, int *string_length);
 signed main(void)
 {
     int n;
-    printf("\n Please enter the nu4mber of elements in the array  (max 30) :");
+    printf("\n Please enter the number of elements in the array  (max 30) :");
     scanf("%d", &n);
     int array[n];
     int array_sum = 0;

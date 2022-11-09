@@ -5,69 +5,63 @@
 #define array_length 30
 
 // function declaration //
-void populator_pointer(signed array[], signed *first_number , signed *second_number, signed *third_number, signed *reader)
+void populator(signed array[], signed *first_number, signed *second_number, signed *third_number, signed *reader_vector);
+
+// driver code //
+signed main()
 {
-    loc0:
-        
-        if(*reader>2)
-        goto loc1;
     
-    
-        if(*reader==null)
-             {
-                array[*reader] = *first_number;
-                *reader +=1;
-                goto loc0;
-            }
-    
-        if(*reader==1)
-         {
-               array[*reader] = *second_number;
-               *reader +=1;
-               goto loc0;
-        
-        if(*reader==2)
+    signed array[array_length],first_number = null, second_number = 1, third_number = 1, reader_vector = null;
+    populator(array, &first_number, &second_number, &third_number, &reader_vector);
+    for(signed i=0;i<array_length;i++)
         {
-            array[*reader] = *third_number;
-            *reader +=1;
+            printf("\n The %dth element is : %d", i,array[i]);
+        }
+    return null;
+}
+
+// function definition //
+void populator(signed array[], signed *first_number, signed *second_number, signed *third_number, signed *reader_vector)
+{
+
+loc0:
+    if(*reader_vector>2)
+        {
+        
+            goto loc1;
+        }
+
+    if(*reader_vector==0)
+        {
+            array[*reader_vector] = *first_number;
+        
+            *reader_vector+=1;
             goto loc0;
         }
 
-      }
-
-    loc1:
+    if(*reader_vector==1)
         {
-        while(array[*reader]<30)
-            {
-                 array[*reader] = *first_number + *third_number;
-                *first_number = *second_number;
-                *second_number = *third_number;
-                *third_number = array[*reader];
-                *reader +=1;
-                
-            }
+            array[*reader_vector] = *second_number;
+        
+            *reader_vector+=1;
+            goto loc0;
         }
-}
 
-// driver code //
-signed main(void)
-{
-
-signed array[30];
-signed first_number = null;
-signed second_number = 1;
-signed third_number = 1;
-signed reader = null;
-signed i;
-
-populator_pointer(array,&first_number,&second_number,&third_number,&reader);
-for(i=null;i<30;i++)
-    {
-          printf("\n The %dth element of the array is %d",i,array[i]);
+    if(*reader_vector==2)
+        {
+            array[*reader_vector] = *third_number;
+            *reader_vector+=1;
+        
+            goto loc0;
+        }
+loc1:
+    while(*reader_vector<array_length)
+        {
+            array[*reader_vector] = *first_number + *third_number;
+            *first_number = *second_number;
+            *second_number = *third_number;
+            *third_number = array[*reader_vector];
+        
+            *reader_vector+=1;
     }
-return null;
-
 }
-
-
-

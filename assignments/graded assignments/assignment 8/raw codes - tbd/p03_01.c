@@ -1,53 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#define null 0
+#define array_length 30
 
-void populator(int ar[], int *ta, int *tb, int *tc, int *reader){
+// function declaration //
+void populator(signed array[], signed *first_number, signed *second_number, signed *third_number, signed *reader_vector);
 
-loc0:
-    if(*reader>2){
-        //printf("%d\n", ar[*reader]);
-        goto loc1;
-    }
-    if(*reader==0){
-        ar[*reader] = *ta;
-        //printf("%d\n", ar[*reader]);
-        *reader+=1;
-        goto loc0;
-    }
-    if(*reader==1){
-        ar[*reader] = *tb;
-        //printf("%d\n", ar[*reader]);
-        *reader+=1;
-        goto loc0;
-    }
-    if(*reader==2){
-        ar[*reader] = *tc;
-        *reader+=1;
-        //printf("%d\n", ar[*reader]);
-        goto loc0;
-    }
-loc1:
-    while(*reader<30){
-        ar[*reader] = *ta + *tc;
-        *ta = *tb;
-        *tb = *tc;
-        *tc = ar[*reader];
-        //printf("%d\n", ar[*reader]);
-        *reader+=1;
-    }
+// driver code //
+signed main()
+{
+    
+    signed array[array_length],first_number = null, second_number = 1, third_number = 1, reader_vector = null;
+    populator(array, &first_number, &second_number, &third_number, &reader_vector);
+    for(signed i=0;i<array_length;i++)
+        {
+            printf("%d\n", array[i]);
+        }
+    return null;
 }
 
-int main()
+// function definition //
+void populator(signed array[], signed *first_number, signed *second_number, signed *third_number, signed *reader_vector)
 {
-    int ar[30];
-    int ta = 0;
-    int tb = 1;
-    int tc = 1;
-    int reader = 0;
-    printf("let's go\n");
-    populator(ar, &ta, &tb, &tc, &reader);
-    for(int i=0;i<30;i++){
-        printf("%d\n", ar[i]);
+
+loc0:
+    if(*reader_vector>2)
+        {
+        
+            goto loc1;
+        }
+
+    if(*reader_vector==0)
+        {
+            array[*reader_vector] = *first_number;
+        
+            *reader_vector+=1;
+            goto loc0;
+        }
+
+    if(*reader_vector==1)
+        {
+            array[*reader_vector] = *second_number;
+        
+            *reader_vector+=1;
+            goto loc0;
+        }
+
+    if(*reader_vector==2)
+        {
+            array[*reader_vector] = *third_number;
+            *reader_vector+=1;
+        
+            goto loc0;
+        }
+loc1:
+    while(*reader_vector<array_length)
+        {
+            array[*reader_vector] = *first_number + *third_number;
+            *first_number = *second_number;
+            *second_number = *third_number;
+            *third_number = array[*reader_vector];
+        
+            *reader_vector+=1;
     }
-    return 0;
 }
