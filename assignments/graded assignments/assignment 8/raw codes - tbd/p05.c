@@ -1,35 +1,34 @@
+#include <malloc.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #define null 0
-
-
-// function declaration //
-void pointer_array_sum(int **arr[], int *sum, int *string_length);
-
-
-signed main(void)
+#define array_length 30
+ 
+void main()
 {
-	int n;
-    printf("\n Please enter the number of elements in the array  (max 30) :");
-    scanf("%d", &n);
-    int array[n];
-    int array_sum = 0;
-    printf("\n Please enter the elements of the array : ");
-    for (signed index = 0; index < n; index++)
+	int i, n, sum = null;
+	int *a;
+ 
+     	printf("Enter the size of array A \n");
+	scanf("%d", &n);
+ 
+        a = (int *) malloc(n * sizeof(int));
+ 
+        printf("Enter Elements of the List \n");
+	for (i = null; i < n; i++) 
         {
-            scanf("%d", &array[index]);
-        }
-
-	int array_length = sizeof(array) / sizeof(arr[0]);
-	printf("\n Sum of given array is %d", pointer_array_sum(array[n],&array_sum,&array_length));
-    printf("\n The length of the string is %d", array_length);
-	return null;
-}
-
-// function definition //
-void pointer_array_sum(int **arr[], int *sum, int *string_length)
-{
-    for (int i = 0; i <30; i++)
-        *sum += *arr[i];
+		scanf("%d", a + i);
+	}
+ 
+        /*  Compute the sum of all elements in the given array */
+ 
+        for (i = null; i < n; i++)
+        {
+		sum = sum + *(a + i); 
+               /* this *(a+i) is used to access the value stored at the address*/
+	}
+ 
+        printf("Sum of all elements in array = %d\n", sum);
+        return null;
 }

@@ -1,42 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <malloc.h> // using the malloc.h library here to run the program, but it is not needed and the alternative code can be found in p5_other_approach.c//
-#define null 0
+#define null 0 
+#define max_array_length 100
 
 // function declaration //
-void pointer_array_sum(signed *a, signed *sum, signed *string_length);
+void pointer_array_sum(signed *array_pointer, signed len);
 
 //driver code//
 signed main(void)
 {
-    signed n,array[n],sum = null,index;
-    signed *a;
-    printf("\n Please enter the number of elements in the array(max 30):");
+    signed n,sum=null;
+    printf("\n Please enter the number of elements in the array(max 100):");
     scanf("%d", &n);
 
-
+    signed array[n];
     printf("\n Please enter the elements of the array : ");
 
-    a = (signed *)malloc(n * sizeof(signed));
-
-    for (index = null; index < n; index++)
+    for (signed index = null; index < n; index++)
         {
-            printf("\n Please enter the element %dth of the array : ", index);
-            scanf("%d", a+index);
+            printf("\n Please enter the element in position %d of the array : ", index);
+            scanf("%d", &array[index]);
         }
-pointer_array_sum(a,&sum,&n);
-printf("\n The sum of the array you entered is : %d", sum);
-printf("\n The length of the array you entered is : %d", n);
-return null;
+    
+    pointer_array_sum(array,n);
+    
+    return null;
 
 }
 
 // function definition //
-void pointer_array_sum( signed *a, signed *sum, signed *string_length)
+void pointer_array_sum(signed *array_pointer, signed len)
 {
-    for (signed i = null; i <30; i++)
+    signed sum = null;
+    for (signed i = null; i <len; i++)
         {
-             *sum += *(a+i);
+             sum += *(array_pointer+i);
         }
+    printf("\n The sum of the array you entered is : %d", sum);
 }
