@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define null 0
+#define unity 1
 
 // function declarations //
 void pointer_factorial_finder(signed *number, signed *factorial);
