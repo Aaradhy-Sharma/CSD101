@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #define null 0
+#define unity 1
 #define array_length 30
+
 
 // function declarations //
 void populator(signed array[], signed *first_number, signed *second_number, signed *third_number, signed *reader_vector);
