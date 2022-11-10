@@ -3,6 +3,7 @@
 #include <string.h>
 #define padding_charcter '#' // padding character - change the character within ' ' to any padding character of your choice //
 #define null 0 
+#define unity 1
 #define max_string_length 255 // max string length - change the value within ' ' to any max string length of your choice //
 
 // function declarations//
