@@ -1,15 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define padding_charcter '#' // padding character - change the character within ' ' to any padding character of your choice //
 #define null 0
 #define max_string_length 255
 
+//function declaration//
+void transposition_cipher_encrypter(signed start, signed end , signed n , char string[], char output_string[]);
 
-// driver code //
+// global variable declarations //
+signed cache_vector = null;
+signed output_string_length = null;
+signed a = null;
+signed b = null;
+signed n = null;
+
 signed main(void)
 {
-    signed n=null, a=null, b=null;
+    signed n=null, a=null, b=null,start=null;
     char input_string[max_string_length];
     printf("\n Please enter the string to be encrypted: ");
     fgets(input_string, max_string_length, stdin);
@@ -24,16 +31,24 @@ signed main(void)
     printf("\n Please enter the value of the ending index, b : ");
     scanf("%d", &b);
 
-    signed cache_vector = n - (input_string_length % n);
-    signed output_string_length = input_string_length + cache_vector;
+    cache_vector = n - (input_string_length % n);
+    output_string_length = input_string_length + cache_vector;
 
     char output_string[output_string_length];
     strcpy(output_string, input_string);
 
-    for(signed i=null; i<cache_vector; i++)
+    transposition_cipher_encrypter(start, output_string_length, n, output_string, output_string);
+    return null;
+
+}
+
+// function definition//
+void transposition_cipher_encrypter(signed start, signed end , signed n , char string[], char output_string[])
+{
+    for(signed i=null; i< cache_vector; i++)
         {
         
-        output_string[output_string_length + i] = padding_charcter;
+        output_string[output_string_length + i] = ' ';
 
         }
 
@@ -42,7 +57,7 @@ signed main(void)
    signed padded_reader_count = padded_output_string_length/n;
    char final_output_string[padded_output_string_length];
 
-   signed start = null;
+   start = null;
 
     for(signed j=null; j<padded_reader_count; j++)
         { 
@@ -56,11 +71,7 @@ signed main(void)
         }
     
     printf("\n The encrypted string is: %s", final_output_string);
-    return null;
-
 }
-
-
 
 
 
