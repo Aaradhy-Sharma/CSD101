@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define null 0
+#define unity 1
 
 // function declarations //
 void cycle_pointer(signed *first_number, signed *second_number, signed *third_number);
