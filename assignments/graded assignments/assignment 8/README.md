@@ -16,7 +16,7 @@
 
 ## Important Note
 
-- Special thanks to [@AnarchistHoneybun](https://github.com/AnarchistHoneybun)for helping me out with [Problem 6](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%208/p6.c).
+- Special thanks to [@AnarchistHoneybun](https://github.com/AnarchistHoneybun) for helping me out with [Problem 6](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%208/p6.c).
 - The project has not been submitted previously in any other course.
 
 - The project has not been copied from any other source.
