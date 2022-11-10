@@ -4,17 +4,14 @@
 #define null 0
 #define array_length 30
 
-// function declaration //
+// function declarations //
 void populator(signed array[], signed *first_number, signed *second_number, signed *third_number, signed *reader_vector);
+void watermark();
 
 // driver code //
 signed main()
 {
-
-    printf("\n\t\t ---------------------------------------------------");
-    printf("\n\t\t\t pointer populator by Aaradhy Sharma ");
-    printf("\n\t\t ---------------------------------------------------");
-
+    watermark();
     signed array[array_length],first_number = null, second_number = 1, third_number = 1, reader_vector = null;
     populator(array, &first_number, &second_number, &third_number, &reader_vector);
     for(signed i=0;i<array_length;i++)
@@ -24,7 +21,7 @@ signed main()
     return null;
 }
 
-// function definition //
+// function definitions //
 void populator(signed array[], signed *first_number, signed *second_number, signed *third_number, signed *reader_vector)
 {
 
@@ -68,4 +65,12 @@ loc1:
         
             *reader_vector+=1;
     }
+}
+
+void watermark()
+{
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t pointer populator by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\n");
 }

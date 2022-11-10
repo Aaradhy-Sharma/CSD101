@@ -6,16 +6,14 @@
 
 
 
-// function declaration //
+// function declarations //
 void pointer_array_sum(signed *array_pointer, signed len);
+void watermark();
 
 //driver code//
 signed main(void)
 {
-    printf("\n\t\t ---------------------------------------------------");
-    printf("\n\t\t\t Pointer Array Sum finder by Aaradhy Sharma ");
-    printf("\n\t\t ---------------------------------------------------");
-
+    watermark();
     signed n,sum=null;
     printf("\n Please enter the number of elements in the array(max 100):");
     scanf("%d", &n);
@@ -35,7 +33,7 @@ signed main(void)
 
 }
 
-// function definition //
+// function definitions //
 void pointer_array_sum(signed *array_pointer, signed len)
 {
     signed sum = null;
@@ -44,4 +42,12 @@ void pointer_array_sum(signed *array_pointer, signed len)
              sum += *(array_pointer+i);
         }
     printf("\n The sum of the array you entered is : %d", sum);
+}
+
+void watermark()
+{
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t Pointer array sum finder by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\n");
 }

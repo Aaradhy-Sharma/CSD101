@@ -3,16 +3,14 @@
 #include <string.h>
 #define null 0
 
-// function declaration //
+// function declarations //
 void pointer_factorial_finder(signed *number, signed *factorial);
+void watermark();
 
 // driver code //
 signed main(void)
 {
-    printf("\n\t\t ---------------------------------------------------");
-    printf("\n\t\t\t Pointer factorial finder by Aaradhy Sharma ");
-    printf("\n\t\t ---------------------------------------------------");
-
+    watermark();
     signed number_input;
     printf("\n Please enter the number : ");
     scanf("%d", &number_input);
@@ -24,11 +22,19 @@ signed main(void)
 
 }
 
-// function definition //
+// function definitions //
 void pointer_factorial_finder(signed *number, signed *factorial)
 {
     for (signed index = 1; index <= *number; index++)
         {
             *factorial *= index;
         }
+}
+
+void watermark()
+{
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t Pointer factorial finder by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\n");
 }

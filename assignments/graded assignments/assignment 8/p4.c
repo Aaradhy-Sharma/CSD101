@@ -3,16 +3,14 @@
 #include <string.h>
 #define null 0
 
-// function declaration //
+// function declarations //
 void pointer_string_reverser(char *string);
+void watermark();
 
 // driver code //
 signed main(void)
 {
-    printf("\n\t\t ---------------------------------------------------");
-    printf("\n\t\t\t Pointer String Reverser by Aaradhy Sharma ");
-    printf("\n\t\t ---------------------------------------------------");
-
+    watermark();
     char string[100];
     printf("\n Please enter the string : ");
     scanf("%s", string);
@@ -23,7 +21,7 @@ signed main(void)
 
 }
 
-// function definition //
+// function definitions //
 void pointer_string_reverser(char *string)
 {
     signed length = strlen(string);
@@ -33,4 +31,12 @@ void pointer_string_reverser(char *string)
             string[index] = string[length - index - 1];
             string[length - index - 1] = temp;
         }
+}
+
+void watermark()
+{
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t Pointer string reverser by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\n");
 }

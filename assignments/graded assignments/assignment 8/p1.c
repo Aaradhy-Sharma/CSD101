@@ -3,15 +3,14 @@
 #include <string.h>
 #define null 0
 
-// function declaration //
+// function declarations //
 void cycle_pointer(signed *first_number, signed *second_number, signed *third_number);
+void watermark();
 
 // driver code //
 signed main(void)
 {
-    printf("\n\t\t ---------------------------------------------------");
-    printf("\n\t\t\t pointer number cycler by Aaradhy Sharma ");
-    printf("\n\t\t ---------------------------------------------------");
+    watermark();
     signed first_number, second_number, third_number;
     printf("\n Please enter the first number : ");
     scanf("%d", &first_number);
@@ -28,11 +27,19 @@ signed main(void)
 
 }
 
-// function definition //
+// function definitions //
 void cycle_pointer(signed *first_number, signed *second_number, signed *third_number)
 {
     signed temp = *second_number;
     *second_number = *first_number;
     *first_number = *third_number;
     *third_number = temp;
+}
+
+void watermark()
+{
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\t\t\t pointer number cycler by Aaradhy Sharma ");
+    printf("\n\t\t ---------------------------------------------------");
+    printf("\n\n");
 }
