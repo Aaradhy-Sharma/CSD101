@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define null 0 
+#define unity 1
 #define max_array_length 100
 
 
