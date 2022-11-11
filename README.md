@@ -21,7 +21,7 @@ The folder will be updated twice per week to keep upto date with the latest assi
 
 - [**Assignment 8**](https://github.com/Aaradhy-Sharma/CSD101/tree/master/assignments/graded%20assignments/assignment%208) - Eighth graded assignment. Naming convections have been followed as before.
 
-- [**Assignment 9**](https://github.com/Aaradhy-Sharma/CSD101/tree/master/assignments/graded%20assignments/assignment%209)- Ninth graded assignment. NOT yet released.
+- [**Assignment 9**](https://github.com/Aaradhy-Sharma/CSD101/tree/master/assignments/graded%20assignments/assignment%209)- Ninth graded assignment.Naming convections have been followed as before..
 
 - [**Assignment 10**](https://github.com/Aaradhy-Sharma/CSD101/tree/master/assignments/graded%20assignments/assignment%210) - Tenth graded assignment. NOT yet released.
 
