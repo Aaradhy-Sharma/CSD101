@@ -39,23 +39,3 @@ void watermark()
     printf("\n\n");
 }
 
-void random_name_generator(char *name)
-{
-    char *vowels = "aeiou";
-    char *consonants = "bcdfghjklmnpqrstvwxyz";
-    signed length = rand() % 10 + 5;
-    signed i = null;
-    while (i < length)
-    {
-        if (i % 2 == null)
-        {
-            name[i] = vowels[rand() % 5];
-        }
-        else
-        {
-            name[i] = consonants[rand() % 21];
-        }
-        i++;
-    }
-    name[i] = '\0';
-}
