@@ -148,3 +148,4 @@ void watermark()
 
 void display(struct cricketer *c)
 {
+    printf("
