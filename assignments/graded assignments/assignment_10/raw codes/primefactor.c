@@ -1,0 +1,1 @@
+// function to check which array element has the highest prime factor and print it //
