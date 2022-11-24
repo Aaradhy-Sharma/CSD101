@@ -1,44 +1,92 @@
-// simple c program to access database created by us using structs and pointers //
+// simple c program containing a segment of student dbms //
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <malloc.h>
+#include <time.h>
 #define null 0
+#define SPD 10 // SPD = students per department //
+#define max_string 100 // max_string = maximum string length //
 
 // structure declaration //
 struct student
 {
-    char name[100];
     signed roll_number;
-    char department;
-    signed year;
+    char name[max_string];
+    char department[max_string]; // Civil , Mechanical , Economics & Maths //
+    signed year; // years: 2015,2016,2017&2018 //
 };
 
-// function declaration //
-void watermarks(); // function to print watermarks //
-void menu(); // function to display menu //
-void add_student(struct student *s); // function to add student //
-void menu_student(struct student *s); // function to display menu //
-void display_student(struct student *s); // function to display student //
-void search_student(struct student *s); // function to search student //
-void delete_student(struct student *s); // function to delete student //
-void modify_student(struct student *s); // function to modify student //
-void printer_specific_year(struct student *s); // function to print the students of a specific year //
-void fetch_student_via_roll_number(struct student *s); // function to fetch student via roll number //
-void loop_until_exit(struct student *s); // function to loop until exit //
+// function declarations //
+void watermark(); // function to print watermarks //
+void printer_specific_year(struct student s[16*SPD], signed year); //function to display all students from a specific year //
+void printer_roll_number(struct student s[16*SPD], signed roll_number); // function to display student via roll number //
 
 // driver code //
 signed main(void)
 {
-    struct student *s;
-    s = (struct student *)malloc(sizeof(struct student));
-    loop_until_exit(s);
+    srand(time(null));
+    // filling data in the structure //
+    char department[4][max_string] = {"Civil", "Mechanical", "Economics", "Maths"};
+    signed year[4] = {2015, 2016, 2017, 2018};
+    char name[SPD][max_string] = {"John", "Smith", "David", "Miller", "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson"};
+
+    struct student s[16*SPD];
+    for(signed i=null,j=null;i<4;i++)
+    {
+        for(signed k=null;k<4;k++)
+        {
+            for(signed l=null;l<SPD;l++)
+            {
+                s[j].roll_number = (i*1000)+(k*100)+l;
+                strcpy(s[j].name,name[l]);
+                strcpy(s[j].department,department[i]);
+                s[j].year = year[k];
+                j++;
+            }
+        }
+    }
+    // printing data //
+    watermark();
+    signed year_choice;
+    printf("\n Enter the year to display the students: ");
+    scanf("%d", &year_choice);
+    printer_specific_year(s,year_choice);
+    signed roll_number_choice;
+    printf("\n Enter the roll number to display the student: ");
+    scanf("%d", &roll_number_choice);
+    printer_roll_number(s,roll_number_choice);
     return null;
 }
 
+// function definitions //
 
-// function definition //
+void printer_roll_number(struct student s[16*SPD], signed roll_number)
+{
+    for(signed i=null;i<16*SPD;i++)
+    {
+        if(s[i].roll_number == roll_number)
+        {
+            printf("\n %d \t %s \t %s \t %d", s[i].roll_number, s[i].name, s[i].department, s[i].year);
+            return;
+        }
+    }
+    printf("\n No student found with the given roll number.");
+}
+
+void printer_specific_year(struct student s[16*SPD], signed year)
+{
+    printf("\n Roll Number \t Name \t Department \t Year");
+    for(signed i=null;i<16*SPD;i++)
+    {
+        if(s[i].year == year)
+        {
+            printf("\n %d \t %s \t %s \t %d", s[i].roll_number, s[i].name, s[i].department, s[i].year);
+        }
+    }
+}
+
 void watermark()
 {
     printf("\n\t\t ---------------------------------------------------"); // watermark //
@@ -46,189 +94,5 @@ void watermark()
     printf("\n\t\t ---------------------------------------------------");
     printf("\n\n");
 }
-
-void add_student(struct student *s)
-{
-    printf("\n Enter the name of the student: ");
-    scanf("%s", s->name);
-    printf("\n Enter the roll number of the student: ");
-    scanf("%d", &s->roll_number);
-    printf("\n Enter the department of the student: ");
-    scanf(" %c", &s->department);
-    printf("\n Enter the year of the student: ");
-    scanf("%d", &s->year);
-}
-
-void display_student(struct student *s)
-{
-    printf("\n The name of the student is: %s", s->name);
-    printf("\n The roll number of the student is: %d", s->roll_number);
-    printf("\n The department of the student is: %d", s->department);
-    printf("\n The year of joining of the student is: %d", s->year);
-}
-
-void search_student(struct student *s)
-{
-    printf("\n Enter the roll number of the student to be searched: ");
-    scanf("%d", &s->roll_number);
-    printf("\n The name of the student is: %s", s->name);
-    printf("\n The roll number of the student is: %d", s->roll_number);
-    printf("\n The department of the student is: %d", s->department);
-    printf("\n The year of joining of the student is: %d", s->year);
-}
-
-void delete_student(struct student *s)
-{
-    printf("\n Enter the roll number of the student to be deleted: ");
-    scanf("%d", &s->roll_number);
-    if (s->roll_number == s->roll_number)
-    {
-        printf("\n The student has been deleted from the database. ");
-    }
-    else
-    {
-        printf("\n The student does not exist in the database. ");
-    }
-}
-
-void modify_student(struct student *s)
-{
-    printf("\n Enter the roll number of the student to be modified: ");
-    scanf("%d", &s->roll_number);
-    if (s->roll_number == s->roll_number)
-    {
-        printf("\n Enter the name of the student: ");
-        scanf("%s", s->name);
-        printf("\n Enter the roll number of the student: ");
-        scanf("%d", &s->roll_number);
-        printf("\n Enter the department of the student: ");
-        scanf("%d", s->department);
-        printf("\n Enter the year of joining of the student: ");
-        scanf("%d", &s->year);
-    }
-    else
-    {
-        printf("\n The student does not exist in the database. ");
-    }
-}
-
-void printer_specific_year(struct student *s)
-{
-    printf("\n Enter the year of joining of the student to be printed: ");
-    scanf("%d", &s->year);
-    if (s->year == s->year)
-    {
-        printf("\n The name of the student is: %s", s->name);
-        printf("\n The roll number of the student is: %d", s->roll_number);
-        printf("\n The department of the student is: %d", s->department);
-        printf("\n The year of joining of the student is: %d", s->year);
-    }
-    else
-    {
-        printf("\n The student does not exist in the database. ");
-    }
-}
-
-void fetch_student_via_roll_number(struct student *s)
-{
-    printf("\n Enter the roll number of the student to be fetched: ");
-    scanf("%d", &s->roll_number);
-    if (s->roll_number == s->roll_number)
-    {
-        printf("\n The name of the student is: %s", s->name);
-        printf("\n The roll number of the student is: %d", s->roll_number);
-        printf("\n The department of the student is: %d", s->department);
-        printf("\n The year of joining of the student is: %d", s->year);
-    }
-    else
-    {
-        printf("\n The student does not exist in the database. ");
-    }
-}
-
-void menu_student(struct student *s)
-{
-    signed choice;
-    printf("\n Enter 1 to add a student. ");
-    printf("\n Enter 2 to display a student. ");
-    printf("\n Enter 3 to search a student. ");
-    printf("\n Enter 4 to delete a student. ");
-    printf("\n Enter 5 to modify a student. ");
-    printf("\n Enter 6 to print the students of a specific year. ");
-    printf("\n Enter 7 to fetch a student via roll number. ");
-    printf("\n Enter 8 to exit. ");
-    printf("\n Enter your choice: ");
-    scanf("%d", &choice);
-    switch (choice)
-    {
-    case 1:
-        add_student(s);
-        break;
-    case 2:
-        display_student(s);
-        break;
-    case 3:
-        search_student(s);
-        break;
-    case 4:
-        delete_student(s);
-        break;
-    case 5:
-        modify_student(s);
-        break;
-    case 6:
-        printer_specific_year(s);
-        break;
-    case 7:
-        fetch_student_via_roll_number(s);
-        break;
-    case 8:
-        printf("\n Thank you for using the program.Terminating this program... ");
-        printf("\n Program terminated. ");
-        exit(0);
-        break;
-    default:
-        printf("\n Invalid choice. ");
-        break;
-    }
-}
-
-void menu()
-{
-    struct student s;
-    signed choice;
-    printf("\n Enter 1 to access the student database. ");
-    printf("\n Enter 2 to exit. ");
-    printf("\n Enter your choice: ");
-    scanf("%d", &choice);
-    switch (choice)
-    {
-    case 1:
-        menu_student(&s);
-        break;
-    case 2:
-        printf("\n Thank you for using the program.Terminating this program... ");
-        printf("\n Program terminated. ");
-        exit(null);
-        break;
-    default:
-        printf("\n Invalid choice. ");
-        break;
-    }
-}
-
-void loop_until_exit(struct student *s)
-{
-    while (1)
-    {
-        menu(s);
-    }
-}
-
-
-
-
-
-
 
 
