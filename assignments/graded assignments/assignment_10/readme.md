@@ -1,8 +1,8 @@
-## Graded Assignment 9
+## Graded Assignment 10
 
 ## Disclaimer
 
-- This section contains the solutions to the problems for graded assignment 9 of the CSD101 course.
+- This section contains the solutions to the problems for graded assignment 10 of the CSD101 course.
 
 - The solutions are provided for the purpose of learning and understanding the concepts of the course.
 
@@ -16,6 +16,8 @@
 
 ## Important Note
 
+- - Special thanks to [@AnarchistHoneybun](https://github.com/AnarchistHoneybun) for helping me out with this project.
+
 - The project has not been submitted previously in any other course.
 
 - The project has not been copied from any other source.
@@ -25,22 +27,48 @@
 
 ## Contents
 
-- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/Assignment%209.pdf) - You can find a copy of the original question paper here.
+- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/Assignment_structure.pdf) - You can find a copy of the original question paper here.
 
-- [Problem 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/p1.c) - Complete the program adding the following instructions. Print the value of p, p+1 and p+2 Print the value of *(*(p+i)+j) where 0<= i < 3 and 0<=j <4 Do the above using a as the pointer.
+- [Problem 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p1.c) - 
+Create two different structures: point and triangle. Structure point contains 
+2-real values to define a point on xy-plane and triangle contains three 
+points. 
+Write a program which takes three points as input and checks if the points 
+forming a triangle or not. If yes, then compute the length of all sides of the 
+triangle. [Note: A triangle is valid if sum of its two sides is greater than the 
+third side.]
 
-- [Problem 2](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/p2.c) - Write a program to implement the concept of array of pointers. Create an array ofpointers of length 5. Create another array of integers of size 5. Now assign eachelement of the array to each pointer. Update the values of the array using pointers byadding 5 to each array element. Print the updated value using both array and pointerexpressions.
 
-- [Problem 3](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/p3.c) - Write a program to create a 3-dimensional array arr[2][3][2] of integers. Print thevalues of the array using pointer arithmetic where arr is the pointer and also find the largest number from the array using a pointer.
+- [Problem 2](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p2.c) - 
+Create a structure to specify data on students given below:
+Roll number, Name, Department, Year of joining.
+Assume that the data is collected for the years 2015, 2016, 2017 and 2018 
+for four different departments, namely, Civil, Mechanical, Economics and 
+Maths. Each department has total 10 enrollments year-wise
 
-- [Problem 4](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/p4.c) - Create a 2-dimensional array arr[3][5]. Create a pointer to the array. Now sort(ascending order) the array row-wise. At the end print the sorted array using pointer arithmetic.
+- [Problem 3](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p3.c) - 
+A record contains name of a cricketer, her age, and number of test matches 
+that she has played and the average runs that she has scored in each test 
+match. Create an array of structures to hold records of 20 such cricketers 
+and then write a program to read these records and arrange them in 
+ascending order by average runs. Use any sorting algorithm of your choice
 
-- [Problem 5](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/p5.c) - Dynamically allocate memories to store a pair of square matrices where thedimension values [MxN and NxM both N,M <=3] and the matrix elements arereceived from the user. Perform multiplication of these matrices. Use malloc() fordynamic allocation of memory and the function free() for deallocation.
+- [Problem 4](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p4.c) -
+Create a structure to specify data of customers in a bank. The data to be 
+stored is: Account number, Name, Balance in account. Assume maximum 
+of 15 customers in the bank. 
+(a) Write a function to print the Account number and name of each 
+customer with balance below Rs. 100. 
+(b) If a customer request for withdrawal or deposit, it is given in the form: 
+Acct. no, amount, code (1 for deposit, 0 for withdrawal)
 
-- [Problem 6](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/p6.c) - Dynamically allocate memories to two square matrices A and B. Check if thefollowing holds true: (A.B)-1 = B-1.A-1 . Use malloc() for dynamic allocation ofmemory and the function free() for deallocation. For ease of implementation, you canconsider 2x2 matrices.
+- [Problem 5](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p5.c) -
+Write a program to create an array of pointers to string where the strings 
+are entered through keyboard. Now sort the pointers to point to strings in 
+alphabetical order. Use malloc() for dynamic allocation of memory and 
+the function free() for deallocation.
 
-- [Problem 7](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment%209/p7.c) - Scrabble is a word game. Two or more players can play it. Players make words usingletter tiles available with them and those already on the board. Each word has a scorebased on the value of each letter and the squares covered by the word. In this problemyou have to write a program that reads a word and calculates the score of the wordusing the letter values. Use the following values for the letters.
-
+- [Raw Codes](https://github.com/Aaradhy-Sharma/CSD101/tree/master/assignments/graded%20assignments/assignment_10/raw%20codes) - This folder contains the raw codes for the problems. The raw codes are alternate approaches to the same problems, you may use these for your reference.
 
 ## Feedback
 If you have any feedback, feel free to reach out to me on my [mail](mailto:as783@snu.edu.in)
