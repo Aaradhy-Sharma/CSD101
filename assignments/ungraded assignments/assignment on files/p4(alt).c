@@ -206,3 +206,4 @@ void write_struct_to_file(char *filename, struct student *student)
 // example of the source file with newline characters //
 // 1, Aaradhy Sharma,100,100,100,100,100,100 \n 2,Ansh Sharma,100,100,100,100,100,100 //
 
+
