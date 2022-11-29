@@ -1,4 +1,4 @@
-// simple c program to create word frequenct statistics of a text file //
+// simple c program to create word frequency statistics of a text file //
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
