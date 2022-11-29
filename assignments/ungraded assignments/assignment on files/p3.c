@@ -3,8 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <malloc.h>
+#include <ctype.h>
 #define null 0
 #define max_string 100 // max_string = maximum string length // // edit this according to your needs //
+#define max_words 1000 // max_words = maximum number of words in the file // // edit this according to your needs //
 
 // function definitions //
 void watermark(); // prints the watermark
@@ -32,15 +34,77 @@ void watermark()
 
 void word_frequency(char *filename)
 {
-    FILE *fp;
-    char ch, word[max_string];
-    int i, j, flag;
-    fp = fopen(filename, "r");
-    if (fp == null)
+  
+    // to open the file //
+    FILE *fp1;
+    char ch, word[max_string], words[max_words][max_string];
+    int i, j, flag, count[max_words];
+    fp1 = fopen(filename, "r");
+    if (fp1 == null)
     {
-        printf("\n The file does not exist");
+        printf("\n Error opening file. Please check the filename and try again. ");
         exit(1);
     }
-    while ((ch = fgetc(fp)) != EOF)
+    // to read the file contents into a string //
+    char *string = (char *)malloc(max_string * sizeof(char));
+    i = null;
+    while ((ch = fgetc(fp1)) != EOF)
     {
-        if (ch == ' ' ||
+        string[i] = ch;
+        i++;
+    }
+    string[i] = '\0';
+    fclose(fp1);
+
+    // to print the file contents //
+    printf("\n The file contents are: ");
+    printf("\n %s", string);
+
+    // to count occurences of all words in the file //
+    i = null;
+    j = null;
+    flag = null;
+
+    while (string[i] != '\0')
+    {
+        if (string[i] == ' ' || string[i] == ',' || string[i] == '.' || string[i] == '!' || string[i] == '?' || string[i] == ';')
+        {
+            word[j] = '\0';
+            flag = null;
+            for (int k = null; k < i; k++)
+            {
+                if (strcmp(word, words[k]) == null)
+                {
+                    flag = 1;
+                    count[k]++;
+                    break;
+                }
+            }
+            if (flag == null)
+            {
+                strcpy(words[j], word);
+                count[j] = 1;
+                j++;
+            }
+            j = null;
+        }
+        else
+        {
+            word[j] = string[i];
+            j++;
+        }
+        i++;
+    }
+
+    // to print the word frequency statistics //
+
+    printf("\n The word frequency statistics are: ");
+    printf("\n Word \t\t Frequency ");
+    for (int k = null; k < j; k++)
+    {
+        printf("\n %s \t\t %d", words[k], count[k]);
+    }
+    printf("\n\n");
+}
+
+   

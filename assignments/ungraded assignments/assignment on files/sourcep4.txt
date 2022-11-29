@@ -1,0 +1,8 @@
+1,Aaradhy Sharma,100,100,100,100,100,100\n2,Aarav Sharma,78,42,45,89,12,33\n4,Anshika Sharma,78,42,45,89,12,33\n5,Anshul Chauhan,78,42,45,89,12,33\n6,Kartik Tiwari,78,42,45,89,12,33\n7, Kriti Nayar,78,42,45,89,12,33\n8,Lakshmi Nivas,78,42,45,89,12,33\n9,Naman Singhal,78,42,45,89,12,33\n10,Nidhi Goyal,78,42,45,89,12,33
+
+
+
+
+
+
+
