@@ -25,7 +25,7 @@
 
 ## Contents
 
-- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/Assignments_file_structure%20(2) - You can find a copy of the original question paper here.
+- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/Assignments_file_structure%20(2)) - You can find a copy of the original question paper here.
 
 - [Problem 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p1.c) - 
 Write a function to do find-and-replace in a file. The filename, source-string andreplacement string should all be passed as input from the user. Assume that the length ofsource and the replacement string are the same
