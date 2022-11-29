@@ -1,8 +1,8 @@
-## Graded Assignment 10
+## Ungraded Assignment 3
 
 ## Disclaimer
 
-- This section contains the solutions to the problems for graded assignment 10 of the CSD101 course.
+- This section contains the solutions to the problems for ungraded assignment 3 of the CSD101 course.
 
 - The solutions are provided for the purpose of learning and understanding the concepts of the course.
 
@@ -16,8 +16,6 @@
 
 ## Important Note
 
-- - Special thanks to [@AnarchistHoneybun](https://github.com/AnarchistHoneybun) for helping me out with this project.
-
 - The project has not been submitted previously in any other course.
 
 - The project has not been copied from any other source.
@@ -27,48 +25,40 @@
 
 ## Contents
 
-- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/Assignment_structure.pdf) - You can find a copy of the original question paper here.
+- [Question Paper](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/Assignments_file_structure%20(2) - You can find a copy of the original question paper here.
 
-- [Problem 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p1.c) - 
-Create two different structures: point and triangle. Structure point contains 
-2-real values to define a point on xy-plane and triangle contains three 
-points. 
-Write a program which takes three points as input and checks if the points 
-forming a triangle or not. If yes, then compute the length of all sides of the 
-triangle. [Note: A triangle is valid if sum of its two sides is greater than the 
-third side.]
+- [Problem 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p1.c) - 
+Write a function to do find-and-replace in a file. The filename, source-string andreplacement string should all be passed as input from the user. Assume that the length ofsource and the replacement string are the same
 
 
-- [Problem 2](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p2.c) - 
-Create a structure to specify data on students given below:
-Roll number, Name, Department, Year of joining.
-Assume that the data is collected for the years 2015, 2016, 2017 and 2018 
-for four different departments, namely, Civil, Mechanical, Economics and 
-Maths. Each department has total 10 enrollments year-wise
+- [Problem 2](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p2.c) - 
+Create a function which takes as arguments two files.The first is the source file and thesecond is called the stop-words file. You should remove all words listed in the stop-wordsfile from the source-file
 
-- [Problem 3](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p3.c) - 
-A record contains name of a cricketer, her age, and number of test matches 
-that she has played and the average runs that she has scored in each test 
-match. Create an array of structures to hold records of 20 such cricketers 
-and then write a program to read these records and arrange them in 
-ascending order by average runs. Use any sorting algorithm of your choice
+- [Problem 3](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p3.c) - 
+Create a function which creates word frequency statistics of a file.
 
-- [Problem 4](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p4.c) -
-Create a structure to specify data of customers in a bank. The data to be 
-stored is: Account number, Name, Balance in account. Assume maximum 
-of 15 customers in the bank. 
-(a) Write a function to print the Account number and name of each 
-customer with balance below Rs. 100. 
-(b) If a customer request for withdrawal or deposit, it is given in the form: 
-Acct. no, amount, code (1 for deposit, 0 for withdrawal)
+- [Problem 4](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p4.c) -
+Write a program to create a database of students having the following information for eachstudent: Roll_no, Name, Marks_in_sub1, Marks_in_sub2, ..., Marks_in_sub6, Total. Yourprogram should take input of 10 students with all their information except Total, which youhave to calculate and write. Your program should take the input information from an inputfile, and write the complete database in another text file
 
-- [Problem 5](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/graded%20assignments/assignment_10/p5.c) -
-Write a program to create an array of pointers to string where the strings 
-are entered through keyboard. Now sort the pointers to point to strings in 
-alphabetical order. Use malloc() for dynamic allocation of memory and 
-the function free() for deallocation.
+- [Problem 4 Alternate Approach](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p4(alt).c) -
+Contains an alternate approach to the problem 4 above.
 
-- [Raw Codes](https://github.com/Aaradhy-Sharma/CSD101/tree/master/assignments/graded%20assignments/assignment_10/raw%20codes) - This folder contains the raw codes for the problems. The raw codes are alternate approaches to the same problems, you may use these for your reference.
+- [Source File for Program 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/sourcep1.txt) - This file is the source file for [Problem 1](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p1.c)
+
+- [Source File for Program 2](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/sourcep2.txt) - This file is the source file for [Problem 2](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p2.c)
+
+- [Source File for Program 3](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/sourcep3.txt) - This file is the source file for [Problem 3](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p3.c)
+
+- [Source File for Program 4](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/sourcep4.txt) - This file is the source file for [Problem 4](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p4.c)
+
+- [Roughwork](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/roughwork.c) -
+Contains the roughwork for the problems.
+
+- [Stopwords File](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/stop-word.txt)-
+Contains the stop word file that will be used in [Problem 2](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/p2.c)
+
+- [LICENSE](https://github.com/Aaradhy-Sharma/CSD101/blob/master/assignments/ungraded%20assignments/assignment%20on%20files/LICENSE)-
+Contains the license for the project.
 
 ## Feedback
 If you have any feedback, feel free to reach out to me on my [mail](mailto:as783@snu.edu.in)
